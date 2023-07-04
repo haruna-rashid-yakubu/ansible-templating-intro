@@ -1,0 +1,3 @@
+- name: "exploit task"
+  debug: 
+    msg: "ceci est une ubuntu"

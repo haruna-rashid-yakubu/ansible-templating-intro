@@ -1,0 +1,15 @@
+--- 
+- name: "templating with jinja2 (string manipuation and filters )"
+  hosts: localhost 
+  vars: 
+    - tableau: [1, 2, 4, 5, 2]
+    - tableau_2 : [6, 7, 8, 9,  2, 4]
+    - patate: macabo
+  tasks:
+    - name: "substitution"
+      debug: 
+        msg: "le nom du zomloa des zomloa est {{ tableau }}"
+  
+    - name: "string manipulation"
+      ansible.builtin.debug:
+        msg: "le resultat des 2 tableaux est {{ tableau | union (tableau_2) }}"
